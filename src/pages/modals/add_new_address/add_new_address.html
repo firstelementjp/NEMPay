@@ -5,7 +5,7 @@
         </ion-title>
         <ion-buttons start>
             <button ion-button (click)="dismiss()">
-                <span ion-text color="primary"> {{'ADD_NEW_ADDRESS' | translate}}</span>
+                <span ion-text color="primary"> {{'CANCEL' | translate}}</span>
             </button>
         </ion-buttons>
     </ion-toolbar>
@@ -34,7 +34,7 @@
         </ion-item>
         <div class="spacer" style="height:10px;"></div>
 
-        <button ion-button color="positive" block [disabled]="!name || !address">
+        <button ion-button color="positive" block type="submit" [disabled]="!name || !address">
             {{'SAVE' | translate}}
         </button>
     </form>

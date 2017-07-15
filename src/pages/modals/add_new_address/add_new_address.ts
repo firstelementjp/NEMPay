@@ -29,10 +29,12 @@ export class AddNewAddressPage {
      * Moves to transfer, by default with mosaic selected
      */
 
-    addAddressToBook(){
+    public addAddressToBook(){
         if(this.nem.isFromNetwork(this.address, this.config.defaultNetwork())){
             this.addressBook.addAddress(this.account, this.name, this.address).then(_=>{
-                this.navCtrl.push(AddressBookPage, {});
+                this.dismiss();
+            }).catch(_=>{
+                console.log('error');
             })
         }
         else{
